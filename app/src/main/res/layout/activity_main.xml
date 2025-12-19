@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F3FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- BAŞLIK -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚 Pomodoro Ders Takibi 📚"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- DERS GİRİŞ -->
+        <EditText
+            android:id="@+id/etLessonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ders adı" />
+
+        <EditText
+            android:id="@+id/etWorkTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Çalışma süresi (dk)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etBreakTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mola süresi (dk)"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnAddLesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕ Ders Ekle"
+            android:backgroundTint="#C7B7FF"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+        <!-- AKTİF DERSLER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aktif Dersler"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:id="@+id/lessonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <!-- ÇALIŞILAN DERSLER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Çalışılan Dersler"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:id="@+id/summaryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>
