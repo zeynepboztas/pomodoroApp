@@ -1,44 +1,65 @@
-﻿# pomodoroApp
-POMODORO DERS TAKİBİ
-Proje Sahipleri
-Zeynep Boztaş – Öğrenci No: 23010207012
-Beren Kolay – Öğrenci No: 23010207034
-Github Linki: https://github.com/zeynepboztas/pomodoroApp.git
-1. Proje Fikrinin Kısa Açıklaması
-Pomodoro Ders Takibi uygulaması, öğrencilerin ders çalışma süreçlerini daha verimli hâle
-getirmek amacıyla geliştirilmiş bir mobil uygulamadır. Uygulama sayesinde kullanıcılar ders
-adı, çalışma süresi ve mola süresi belirleyerek Pomodoro tekniğine uygun şekilde
-çalışmalarını planlayabilmektedir. Her ders için ayrı bir zamanlayıcı oluşturulmakta ve
-çalışılan süreler takip edilmektedir
-2. Kullanılan Temel Kotlin Yapıları ve Bileşenler
-Bu projede, Android Studio geliştirme ortamı kullanılarak Kotlin programlama dili ile bir
-mobil uygulama geliştirilmiştir. Uygulamanın mimarisi Activity tabanlı olarak tasarlanmış
-olup, her ekran bağımsız bir Activity üzerinden yönetilmiştir. Kullanıcı arayüzü bileşenleri
-XML tabanlı tasarım dosyaları aracılığıyla oluşturulmuş ve bu bileşenlerin işlevsel kontrolü
-Kotlin kodları ile sağlanmıştır.
-Uygulama içerisinde kullanıcıdan veri girişi alınabilmesi amacıyla EditText bileşeni
-kullanılmış, kullanıcı etkileşimlerini gerçekleştirmek için Button, metinlerin ekranda
-görüntülenmesi için ise TextView bileşenlerinden yararlanılmıştır. Arayüz bileşenlerinin
-düzenli ve esnek bir biçimde yerleştirilmesi amacıyla LinearLayout ve ScrollView yapıları
-tercih edilmiştir. Ayrıca, kullanıcı tarafından eklenen derslerin dinamik olarak
-oluşturulabilmesi için arayüz elemanları Kotlin kodu aracılığıyla programatik olarak
-tanımlanmıştır.
-Pomodoro çalışma tekniğine uygun zaman yönetimini sağlamak amacıyla CountDownTimer
-sınıfı kullanılmıştır. Bu sınıf sayesinde çalışma ve mola süreleri geri sayım mantığıyla
-yönetilmiş, zamanlayıcı durumu kullanıcıya anlık olarak sunulmuştur. Zamanlayıcının
-başlatılması, durdurulması ve sıfırlanması işlemleri kullanıcı etkileşimleri doğrultusunda
-kontrol edilmiştir.
-Uygulama içerisinde kullanıcıdan alınan verilerin doğruluğunu sağlamak amacıyla koşul
-ifadeleri (if-else) kullanılmış ve hatalı ya da eksik veri girişlerinde kullanıcı bilgilendirilmiştir.
-Kullanıcı etkileşimleri setOnClickListener yapısı aracılığıyla yönetilmiştir. Kritik işlemler
-sırasında kullanıcı onayı alınabilmesi için AlertDialog bileşeni kullanılarak etkileşimli uyarı
-pencereleri oluşturulmuştur.
-Sonuç olarak, bu projede Kotlin programlama dilinin temel yapıları ve Android platformuna
-ait kullanıcı arayüzü bileşenleri etkin bir şekilde kullanılarak, işlevsel, sürdürülebilir ve
-kullanıcı odaklı bir Pomodoro ders takibi uygulaması geliştirilmiştir.
-3. Uygulama Geliştirme Süreci
-Uygulama geliştirme sürecinde öncelikle kullanıcı arayüzü tasarlanmıştır. Daha sonra Kotlin
-kodları ile buton tıklamaları, zamanlayıcı işlemleri ve ders ekleme-silme fonksiyonları
-yazılmıştır. Giriş ekranı ve ana ekran birbirinden ayrılmış, uygulamanın kullanıcı deneyimini
-artıracak sade bir tasarım tercih edilmiştir. Testler yapılarak hatalar giderilmiş ve uygulama
-çalışır hâle getirilmiştir.
+# Pomodoro Ders Takibi
+
+## Proje Hakkında
+Pomodoro Ders Takibi, öğrencilerin ders çalışma süreçlerini daha verimli hâle getirmek amacıyla geliştirilmiş bir Android mobil uygulamasıdır. Uygulama, Pomodoro çalışma tekniğini temel alarak kullanıcıların derslerini planlamasına, çalışma ve mola sürelerini takip etmesine olanak tanır.
+
+Bu proje, Android Studio geliştirme ortamında Kotlin programlama dili kullanılarak geliştirilmiştir.
+
+---
+
+## Proje Sahipleri
+- **Zeynep Boztaş** – 23010207012  
+- **Beren Kolay** – 23010207034  
+
+---
+
+## Kullanılan Teknolojiler
+- **Programlama Dili:** Kotlin  
+- **Geliştirme Ortamı:** Android Studio  
+- **Arayüz Tasarımı:** XML  
+- **Zamanlayıcı:** CountDownTimer  
+- **Tasarım Bileşenleri:** Material Design, AndroidX  
+
+---
+
+## Uygulama Özellikleri
+- Kullanıcı giriş ekranı
+- Ders adı, çalışma süresi ve mola süresi ekleme
+- Pomodoro tekniğine uygun geri sayım zamanlayıcısı
+- Çalışma, mola, durdurma ve sıfırlama işlemleri
+- Çalışılan derslerin ve sürelerin özetlenmesi
+- Dinamik ders kartları oluşturma
+
+---
+
+## Proje Yapısı
+app/
+└── src/
+└── main/
+├── java/com/example/pomodoroapp/
+│ ├── MainActivity.kt
+│ ├── LoginActivity.kt
+│ └── ResetpasswordActivity.kt
+├── res/layout/
+│ ├── activity_main.xml
+│ ├── activity_login.xml
+│ └── ...
+└── AndroidManifest.xml
+
+yaml
+Kodu kopyala
+
+---
+
+## Kurulum ve Çalıştırma
+1. Bu repoyu bilgisayarınıza klonlayınız:
+   ```bash
+   git clone https://github.com/kullaniciadi/pomodoro-ders-takibi.git
+Android Studio ile projeyi açınız.
+
+Gerekli bağımlılıkların yüklenmesini bekleyiniz.
+
+Emulator veya fiziksel cihaz üzerinde uygulamayı çalıştırınız.
+
+Proje Amacı
+Bu projenin amacı, öğrencilerin zaman yönetimini iyileştirmek, düzenli çalışma alışkanlığı kazandırmak ve ders takip süreçlerini kolaylaştıran kullanıcı dostu bir mobil uygulama geliştirmektir.
